@@ -1,0 +1,7 @@
+{
+  "name": "RoomMateDekho",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
