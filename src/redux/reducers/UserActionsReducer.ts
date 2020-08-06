@@ -13,7 +13,8 @@ const initialState: UserActionsReducerState = {
     error: ''
 }
 
-export const UserActionsReducer = (action: any, state = initialState): UserActionsReducerState => {
+export const UserActionsReducer = (state = initialState, action: any ): UserActionsReducerState => {
+    debugger
     switch (action.type){
         case UserActionTypes.USER_ACCOUNT_DETAILS_REQUEST:{
             return{
@@ -24,12 +25,14 @@ export const UserActionsReducer = (action: any, state = initialState): UserActio
         case UserActionTypes.USER_ACCOUNT_DETAILS_SUCCESS:{
             return{
                 ...state,
+                loader:false,
                 response:action.payload
             }
         }
         case UserActionTypes.USER_ACCOUNT_DETAILS_ERROR:{
             return{
                 ...state,
+                loader:false,
                 error:action.payload
             }
         }

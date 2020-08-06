@@ -3,6 +3,7 @@ import React from 'react';
 import { useParams } from 'react-router';
 import ExploreContainer from '../components/ExploreContainer';
 import './Page.css';
+import UserAccount from '../auth/UserAccount';
 
 const Page: React.FC = () => {
 
@@ -25,7 +26,8 @@ const Page: React.FC = () => {
             <IonTitle size="large">{name}</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name={name} />
+        <UserAccount/>
+        {/* <ExploreContainer name={name} /> */}
       </IonContent>
     </IonPage>
   );
